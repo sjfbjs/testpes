@@ -1,0 +1,4469 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "beego Test API",
+        "description": "beego has a very cool tools to autogenerate documents for your API",
+        "version": "1.0.0",
+        "termsOfService": "http://beego.me/",
+        "contact": {
+            "email": "astaxie@gmail.com"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        }
+    },
+    "basePath": "/v1",
+    "paths": {
+        "/pes_backend_category/": {
+            "get": {
+                "tags": [
+                    "pes_backend_category"
+                ],
+                "description": "get PesBackendCategory",
+                "operationId": "PesBackendCategoryController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesBackendCategory"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "pes_backend_category"
+                ],
+                "description": "create PesBackendCategory",
+                "operationId": "PesBackendCategoryController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for PesBackendCategory content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PesBackendCategory"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.PesBackendCategory"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/pes_backend_category/{id}": {
+            "get": {
+                "tags": [
+                    "pes_backend_category"
+                ],
+                "description": "get PesBackendCategory by id",
+                "operationId": "PesBackendCategoryController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesBackendCategory"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "pes_backend_category"
+                ],
+                "description": "update the PesBackendCategory",
+                "operationId": "PesBackendCategoryController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for PesBackendCategory content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PesBackendCategory"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesBackendCategory"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "pes_backend_category"
+                ],
+                "description": "delete the PesBackendCategory",
+                "operationId": "PesBackendCategoryController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/pes_category/": {
+            "get": {
+                "tags": [
+                    "pes_category"
+                ],
+                "description": "get PesCategory",
+                "operationId": "PesCategoryController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesCategory"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "pes_category"
+                ],
+                "description": "create PesCategory",
+                "operationId": "PesCategoryController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for PesCategory content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PesCategory"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.PesCategory"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/pes_category/{id}": {
+            "get": {
+                "tags": [
+                    "pes_category"
+                ],
+                "description": "get PesCategory by id",
+                "operationId": "PesCategoryController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesCategory"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "pes_category"
+                ],
+                "description": "update the PesCategory",
+                "operationId": "PesCategoryController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for PesCategory content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PesCategory"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesCategory"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "pes_category"
+                ],
+                "description": "delete the PesCategory",
+                "operationId": "PesCategoryController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/pes_department/": {
+            "get": {
+                "tags": [
+                    "pes_department"
+                ],
+                "description": "get PesDepartment",
+                "operationId": "PesDepartmentController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesDepartment"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "pes_department"
+                ],
+                "description": "create PesDepartment",
+                "operationId": "PesDepartmentController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for PesDepartment content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PesDepartment"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.PesDepartment"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/pes_department/{id}": {
+            "get": {
+                "tags": [
+                    "pes_department"
+                ],
+                "description": "get PesDepartment by id",
+                "operationId": "PesDepartmentController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesDepartment"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "pes_department"
+                ],
+                "description": "update the PesDepartment",
+                "operationId": "PesDepartmentController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for PesDepartment content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PesDepartment"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesDepartment"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "pes_department"
+                ],
+                "description": "delete the PesDepartment",
+                "operationId": "PesDepartmentController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/pes_field/": {
+            "get": {
+                "tags": [
+                    "pes_field"
+                ],
+                "description": "get PesField",
+                "operationId": "PesFieldController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesField"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "pes_field"
+                ],
+                "description": "create PesField",
+                "operationId": "PesFieldController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for PesField content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PesField"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.PesField"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/pes_field/{id}": {
+            "get": {
+                "tags": [
+                    "pes_field"
+                ],
+                "description": "get PesField by id",
+                "operationId": "PesFieldController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesField"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "pes_field"
+                ],
+                "description": "update the PesField",
+                "operationId": "PesFieldController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for PesField content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PesField"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesField"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "pes_field"
+                ],
+                "description": "delete the PesField",
+                "operationId": "PesFieldController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/pes_findpassword/": {
+            "get": {
+                "tags": [
+                    "pes_findpassword"
+                ],
+                "description": "get PesFindpassword",
+                "operationId": "PesFindpasswordController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesFindpassword"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "pes_findpassword"
+                ],
+                "description": "create PesFindpassword",
+                "operationId": "PesFindpasswordController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for PesFindpassword content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PesFindpassword"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.PesFindpassword"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/pes_findpassword/{id}": {
+            "get": {
+                "tags": [
+                    "pes_findpassword"
+                ],
+                "description": "get PesFindpassword by id",
+                "operationId": "PesFindpasswordController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesFindpassword"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "pes_findpassword"
+                ],
+                "description": "update the PesFindpassword",
+                "operationId": "PesFindpasswordController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for PesFindpassword content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PesFindpassword"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesFindpassword"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "pes_findpassword"
+                ],
+                "description": "delete the PesFindpassword",
+                "operationId": "PesFindpasswordController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/pes_mail_template/": {
+            "get": {
+                "tags": [
+                    "pes_mail_template"
+                ],
+                "description": "get PesMailTemplate",
+                "operationId": "PesMailTemplateController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesMailTemplate"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "pes_mail_template"
+                ],
+                "description": "create PesMailTemplate",
+                "operationId": "PesMailTemplateController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for PesMailTemplate content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PesMailTemplate"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.PesMailTemplate"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/pes_mail_template/{id}": {
+            "get": {
+                "tags": [
+                    "pes_mail_template"
+                ],
+                "description": "get PesMailTemplate by id",
+                "operationId": "PesMailTemplateController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesMailTemplate"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "pes_mail_template"
+                ],
+                "description": "update the PesMailTemplate",
+                "operationId": "PesMailTemplateController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for PesMailTemplate content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PesMailTemplate"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesMailTemplate"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "pes_mail_template"
+                ],
+                "description": "delete the PesMailTemplate",
+                "operationId": "PesMailTemplateController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/pes_member/": {
+            "get": {
+                "tags": [
+                    "pes_member"
+                ],
+                "description": "get PesMember",
+                "operationId": "PesMemberController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesMember"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "pes_member"
+                ],
+                "description": "create PesMember",
+                "operationId": "PesMemberController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for PesMember content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PesMember"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.PesMember"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/pes_member/{id}": {
+            "get": {
+                "tags": [
+                    "pes_member"
+                ],
+                "description": "get PesMember by id",
+                "operationId": "PesMemberController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesMember"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "pes_member"
+                ],
+                "description": "update the PesMember",
+                "operationId": "PesMemberController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for PesMember content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PesMember"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesMember"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "pes_member"
+                ],
+                "description": "delete the PesMember",
+                "operationId": "PesMemberController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/pes_menu/": {
+            "get": {
+                "tags": [
+                    "pes_menu"
+                ],
+                "description": "get PesMenu",
+                "operationId": "PesMenuController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesMenu"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "pes_menu"
+                ],
+                "description": "create PesMenu",
+                "operationId": "PesMenuController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for PesMenu content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PesMenu"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.PesMenu"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/pes_menu/{id}": {
+            "get": {
+                "tags": [
+                    "pes_menu"
+                ],
+                "description": "get PesMenu by id",
+                "operationId": "PesMenuController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesMenu"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "pes_menu"
+                ],
+                "description": "update the PesMenu",
+                "operationId": "PesMenuController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for PesMenu content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PesMenu"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesMenu"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "pes_menu"
+                ],
+                "description": "delete the PesMenu",
+                "operationId": "PesMenuController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/pes_model/": {
+            "get": {
+                "tags": [
+                    "pes_model"
+                ],
+                "description": "get PesModel",
+                "operationId": "PesModelController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesModel"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "pes_model"
+                ],
+                "description": "create PesModel",
+                "operationId": "PesModelController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for PesModel content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PesModel"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.PesModel"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/pes_model/{id}": {
+            "get": {
+                "tags": [
+                    "pes_model"
+                ],
+                "description": "get PesModel by id",
+                "operationId": "PesModelController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesModel"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "pes_model"
+                ],
+                "description": "update the PesModel",
+                "operationId": "PesModelController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for PesModel content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PesModel"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesModel"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "pes_model"
+                ],
+                "description": "delete the PesModel",
+                "operationId": "PesModelController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/pes_node/": {
+            "get": {
+                "tags": [
+                    "pes_node"
+                ],
+                "description": "get PesNode",
+                "operationId": "PesNodeController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesNode"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "pes_node"
+                ],
+                "description": "create PesNode",
+                "operationId": "PesNodeController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for PesNode content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PesNode"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.PesNode"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/pes_node/{id}": {
+            "get": {
+                "tags": [
+                    "pes_node"
+                ],
+                "description": "get PesNode by id",
+                "operationId": "PesNodeController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesNode"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "pes_node"
+                ],
+                "description": "update the PesNode",
+                "operationId": "PesNodeController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for PesNode content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PesNode"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesNode"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "pes_node"
+                ],
+                "description": "delete the PesNode",
+                "operationId": "PesNodeController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/pes_node_group/": {
+            "get": {
+                "tags": [
+                    "pes_node_group"
+                ],
+                "description": "get PesNodeGroup",
+                "operationId": "PesNodeGroupController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesNodeGroup"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "pes_node_group"
+                ],
+                "description": "create PesNodeGroup",
+                "operationId": "PesNodeGroupController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for PesNodeGroup content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PesNodeGroup"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.PesNodeGroup"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/pes_node_group/{id}": {
+            "get": {
+                "tags": [
+                    "pes_node_group"
+                ],
+                "description": "get PesNodeGroup by id",
+                "operationId": "PesNodeGroupController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesNodeGroup"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "pes_node_group"
+                ],
+                "description": "update the PesNodeGroup",
+                "operationId": "PesNodeGroupController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for PesNodeGroup content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PesNodeGroup"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesNodeGroup"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "pes_node_group"
+                ],
+                "description": "delete the PesNodeGroup",
+                "operationId": "PesNodeGroupController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/pes_option/": {
+            "get": {
+                "tags": [
+                    "pes_option"
+                ],
+                "description": "get PesOption",
+                "operationId": "PesOptionController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesOption"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "pes_option"
+                ],
+                "description": "create PesOption",
+                "operationId": "PesOptionController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for PesOption content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PesOption"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.PesOption"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/pes_option/{id}": {
+            "get": {
+                "tags": [
+                    "pes_option"
+                ],
+                "description": "get PesOption by id",
+                "operationId": "PesOptionController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesOption"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "pes_option"
+                ],
+                "description": "update the PesOption",
+                "operationId": "PesOptionController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for PesOption content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PesOption"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesOption"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "pes_option"
+                ],
+                "description": "delete the PesOption",
+                "operationId": "PesOptionController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/pes_route/": {
+            "get": {
+                "tags": [
+                    "pes_route"
+                ],
+                "description": "get PesRoute",
+                "operationId": "PesRouteController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesRoute"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "pes_route"
+                ],
+                "description": "create PesRoute",
+                "operationId": "PesRouteController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for PesRoute content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PesRoute"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.PesRoute"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/pes_route/{id}": {
+            "get": {
+                "tags": [
+                    "pes_route"
+                ],
+                "description": "get PesRoute by id",
+                "operationId": "PesRouteController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesRoute"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "pes_route"
+                ],
+                "description": "update the PesRoute",
+                "operationId": "PesRouteController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for PesRoute content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PesRoute"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesRoute"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "pes_route"
+                ],
+                "description": "delete the PesRoute",
+                "operationId": "PesRouteController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/pes_send/": {
+            "get": {
+                "tags": [
+                    "pes_send"
+                ],
+                "description": "get PesSend",
+                "operationId": "PesSendController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesSend"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "pes_send"
+                ],
+                "description": "create PesSend",
+                "operationId": "PesSendController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for PesSend content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PesSend"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.PesSend"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/pes_send/{id}": {
+            "get": {
+                "tags": [
+                    "pes_send"
+                ],
+                "description": "get PesSend by id",
+                "operationId": "PesSendController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesSend"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "pes_send"
+                ],
+                "description": "update the PesSend",
+                "operationId": "PesSendController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for PesSend content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PesSend"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesSend"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "pes_send"
+                ],
+                "description": "delete the PesSend",
+                "operationId": "PesSendController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/pes_ticket/": {
+            "get": {
+                "tags": [
+                    "pes_ticket"
+                ],
+                "description": "get PesTicket",
+                "operationId": "PesTicketController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesTicket"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "pes_ticket"
+                ],
+                "description": "create PesTicket",
+                "operationId": "PesTicketController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for PesTicket content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PesTicket"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.PesTicket"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/pes_ticket/{id}": {
+            "get": {
+                "tags": [
+                    "pes_ticket"
+                ],
+                "description": "get PesTicket by id",
+                "operationId": "PesTicketController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesTicket"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "pes_ticket"
+                ],
+                "description": "update the PesTicket",
+                "operationId": "PesTicketController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for PesTicket content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PesTicket"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesTicket"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "pes_ticket"
+                ],
+                "description": "delete the PesTicket",
+                "operationId": "PesTicketController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/pes_ticket_chat/": {
+            "get": {
+                "tags": [
+                    "pes_ticket_chat"
+                ],
+                "description": "get PesTicketChat",
+                "operationId": "PesTicketChatController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesTicketChat"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "pes_ticket_chat"
+                ],
+                "description": "create PesTicketChat",
+                "operationId": "PesTicketChatController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for PesTicketChat content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PesTicketChat"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.PesTicketChat"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/pes_ticket_chat/{id}": {
+            "get": {
+                "tags": [
+                    "pes_ticket_chat"
+                ],
+                "description": "get PesTicketChat by id",
+                "operationId": "PesTicketChatController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesTicketChat"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "pes_ticket_chat"
+                ],
+                "description": "update the PesTicketChat",
+                "operationId": "PesTicketChatController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for PesTicketChat content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PesTicketChat"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesTicketChat"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "pes_ticket_chat"
+                ],
+                "description": "delete the PesTicketChat",
+                "operationId": "PesTicketChatController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/pes_ticket_content/": {
+            "get": {
+                "tags": [
+                    "pes_ticket_content"
+                ],
+                "description": "get PesTicketContent",
+                "operationId": "PesTicketContentController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesTicketContent"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "pes_ticket_content"
+                ],
+                "description": "create PesTicketContent",
+                "operationId": "PesTicketContentController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for PesTicketContent content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PesTicketContent"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.PesTicketContent"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/pes_ticket_content/{id}": {
+            "get": {
+                "tags": [
+                    "pes_ticket_content"
+                ],
+                "description": "get PesTicketContent by id",
+                "operationId": "PesTicketContentController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesTicketContent"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "pes_ticket_content"
+                ],
+                "description": "update the PesTicketContent",
+                "operationId": "PesTicketContentController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for PesTicketContent content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PesTicketContent"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesTicketContent"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "pes_ticket_content"
+                ],
+                "description": "delete the PesTicketContent",
+                "operationId": "PesTicketContentController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/pes_ticket_form/": {
+            "get": {
+                "tags": [
+                    "pes_ticket_form"
+                ],
+                "description": "get PesTicketForm",
+                "operationId": "PesTicketFormController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesTicketForm"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "pes_ticket_form"
+                ],
+                "description": "create PesTicketForm",
+                "operationId": "PesTicketFormController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for PesTicketForm content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PesTicketForm"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.PesTicketForm"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/pes_ticket_form/{id}": {
+            "get": {
+                "tags": [
+                    "pes_ticket_form"
+                ],
+                "description": "get PesTicketForm by id",
+                "operationId": "PesTicketFormController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesTicketForm"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "pes_ticket_form"
+                ],
+                "description": "update the PesTicketForm",
+                "operationId": "PesTicketFormController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for PesTicketForm content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PesTicketForm"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesTicketForm"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "pes_ticket_form"
+                ],
+                "description": "delete the PesTicketForm",
+                "operationId": "PesTicketFormController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/pes_ticket_model/": {
+            "get": {
+                "tags": [
+                    "pes_ticket_model"
+                ],
+                "description": "get PesTicketModel",
+                "operationId": "PesTicketModelController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesTicketModel"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "pes_ticket_model"
+                ],
+                "description": "create PesTicketModel",
+                "operationId": "PesTicketModelController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for PesTicketModel content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PesTicketModel"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.PesTicketModel"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/pes_ticket_model/{id}": {
+            "get": {
+                "tags": [
+                    "pes_ticket_model"
+                ],
+                "description": "get PesTicketModel by id",
+                "operationId": "PesTicketModelController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesTicketModel"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "pes_ticket_model"
+                ],
+                "description": "update the PesTicketModel",
+                "operationId": "PesTicketModelController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for PesTicketModel content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PesTicketModel"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesTicketModel"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "pes_ticket_model"
+                ],
+                "description": "delete the PesTicketModel",
+                "operationId": "PesTicketModelController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/pes_user/": {
+            "get": {
+                "tags": [
+                    "pes_user"
+                ],
+                "description": "get PesUser",
+                "operationId": "PesUserController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesUser"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "pes_user"
+                ],
+                "description": "create PesUser",
+                "operationId": "PesUserController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for PesUser content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PesUser"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.PesUser"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/pes_user/{id}": {
+            "get": {
+                "tags": [
+                    "pes_user"
+                ],
+                "description": "get PesUser by id",
+                "operationId": "PesUserController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesUser"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "pes_user"
+                ],
+                "description": "update the PesUser",
+                "operationId": "PesUserController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for PesUser content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PesUser"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesUser"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "pes_user"
+                ],
+                "description": "delete the PesUser",
+                "operationId": "PesUserController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/pes_user_group/": {
+            "get": {
+                "tags": [
+                    "pes_user_group"
+                ],
+                "description": "get PesUserGroup",
+                "operationId": "PesUserGroupController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesUserGroup"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "pes_user_group"
+                ],
+                "description": "create PesUserGroup",
+                "operationId": "PesUserGroupController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for PesUserGroup content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PesUserGroup"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.PesUserGroup"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/pes_user_group/{id}": {
+            "get": {
+                "tags": [
+                    "pes_user_group"
+                ],
+                "description": "get PesUserGroup by id",
+                "operationId": "PesUserGroupController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesUserGroup"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "pes_user_group"
+                ],
+                "description": "update the PesUserGroup",
+                "operationId": "PesUserGroupController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for PesUserGroup content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PesUserGroup"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PesUserGroup"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "pes_user_group"
+                ],
+                "description": "delete the PesUserGroup",
+                "operationId": "PesUserGroupController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "models.PesBackendCategory": {
+            "title": "PesBackendCategory",
+            "type": "object",
+            "properties": {
+                "CategoryDescription": {
+                    "type": "string"
+                },
+                "CategoryName": {
+                    "type": "string"
+                },
+                "CategoryOwner": {
+                    "type": "string"
+                },
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            }
+        },
+        "models.PesCategory": {
+            "title": "PesCategory",
+            "type": "object",
+            "properties": {
+                "CategoryDescription": {
+                    "type": "string"
+                },
+                "CategoryListsort": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "CategoryName": {
+                    "type": "string"
+                },
+                "CategoryParent": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "CategoryStatus": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            }
+        },
+        "models.PesDepartment": {
+            "title": "PesDepartment",
+            "type": "object",
+            "properties": {
+                "DepartmentName": {
+                    "type": "string"
+                },
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            }
+        },
+        "models.PesField": {
+            "title": "PesField",
+            "type": "object",
+            "properties": {
+                "FieldDefault": {
+                    "type": "string"
+                },
+                "FieldDisplayName": {
+                    "type": "string"
+                },
+                "FieldExplain": {
+                    "type": "string"
+                },
+                "FieldForm": {
+                    "description": "是否显示于表单 0:否 1:显示",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "FieldList": {
+                    "description": "是否显示于列表",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "FieldListsort": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "FieldModelId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "FieldName": {
+                    "type": "string"
+                },
+                "FieldOption": {
+                    "type": "string"
+                },
+                "FieldRequired": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "FieldStatus": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "FieldType": {
+                    "type": "string"
+                },
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            }
+        },
+        "models.PesFindpassword": {
+            "title": "PesFindpassword",
+            "type": "object",
+            "properties": {
+                "FindpasswordCreatetime": {
+                    "description": "创建时间",
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "FindpasswordMark": {
+                    "description": "标记",
+                    "type": "string"
+                },
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "MemberId": {
+                    "description": "用户ID",
+                    "type": "integer",
+                    "format": "int64"
+                }
+            }
+        },
+        "models.PesMailTemplate": {
+            "title": "PesMailTemplate",
+            "type": "object",
+            "properties": {
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "MailTemplateContent": {
+                    "type": "string"
+                },
+                "MailTemplateTitle": {
+                    "type": "string"
+                },
+                "MailTemplateType": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            }
+        },
+        "models.PesMember": {
+            "title": "PesMember",
+            "type": "object",
+            "properties": {
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "MemberAssign": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "MemberCreatetime": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "MemberDepartmentId": {
+                    "description": "部门ID",
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "MemberDingid": {
+                    "type": "string"
+                },
+                "MemberEmail": {
+                    "type": "string"
+                },
+                "MemberName": {
+                    "type": "string"
+                },
+                "MemberPassword": {
+                    "type": "string"
+                },
+                "MemberPhone": {
+                    "type": "string"
+                },
+                "MemberStatus": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "MemberWeixin": {
+                    "description": "微信openid",
+                    "type": "string"
+                }
+            }
+        },
+        "models.PesMenu": {
+            "title": "PesMenu",
+            "type": "object",
+            "properties": {
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "MenuIcon": {
+                    "type": "string"
+                },
+                "MenuLink": {
+                    "type": "string"
+                },
+                "MenuListsort": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "MenuName": {
+                    "type": "string"
+                },
+                "MenuPid": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "MenuType": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            }
+        },
+        "models.PesModel": {
+            "title": "PesModel",
+            "type": "object",
+            "properties": {
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "ModelAttr": {
+                    "description": "模型属性 1:前台(含前台) 2:后台",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "ModelName": {
+                    "type": "string"
+                },
+                "ModelSearch": {
+                    "description": "允许搜索",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "ModelStatus": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "ModelTitle": {
+                    "type": "string"
+                }
+            }
+        },
+        "models.PesNode": {
+            "title": "PesNode",
+            "type": "object",
+            "properties": {
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "NodeCheckValue": {
+                    "type": "string"
+                },
+                "NodeController": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "NodeListsort": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "NodeMethodType": {
+                    "type": "string"
+                },
+                "NodeMsg": {
+                    "type": "string"
+                },
+                "NodeName": {
+                    "type": "string"
+                },
+                "NodeParent": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "NodeValue": {
+                    "type": "string"
+                },
+                "NodeVerify": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            }
+        },
+        "models.PesNodeGroup": {
+            "title": "PesNodeGroup",
+            "type": "object",
+            "properties": {
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "NodeId": {
+                    "description": "节点ID",
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "UserGroupId": {
+                    "description": "用户组ID",
+                    "type": "integer",
+                    "format": "int64"
+                }
+            }
+        },
+        "models.PesOption": {
+            "title": "PesOption",
+            "type": "object",
+            "properties": {
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Name": {
+                    "type": "string"
+                },
+                "OptionName": {
+                    "type": "string"
+                },
+                "OptionRange": {
+                    "type": "string"
+                },
+                "Value": {
+                    "type": "string"
+                }
+            }
+        },
+        "models.PesRoute": {
+            "title": "PesRoute",
+            "type": "object",
+            "properties": {
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "RouteController": {
+                    "type": "string"
+                },
+                "RouteHash": {
+                    "type": "string"
+                },
+                "RouteListsort": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "RouteParam": {
+                    "type": "string"
+                },
+                "RouteRule": {
+                    "type": "string"
+                },
+                "RouteStatus": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "RouteTitle": {
+                    "type": "string"
+                }
+            }
+        },
+        "models.PesSend": {
+            "title": "PesSend",
+            "type": "object",
+            "properties": {
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "SendAccount": {
+                    "type": "string"
+                },
+                "SendContent": {
+                    "description": "待发送的内容",
+                    "type": "string"
+                },
+                "SendTime": {
+                    "description": "发送时间",
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "SendTitle": {
+                    "description": "待发送标题",
+                    "type": "string"
+                },
+                "SendType": {
+                    "description": "1:邮箱 2:手机 ..",
+                    "type": "integer",
+                    "format": "int32"
+                }
+            }
+        },
+        "models.PesTicket": {
+            "title": "PesTicket",
+            "type": "object",
+            "properties": {
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "MemberId": {
+                    "description": "站内会员ID . -1表示匿名提交",
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "TicketClose": {
+                    "description": "0:正常 1:关闭",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "TicketCompleteTime": {
+                    "description": "工单完成时间",
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "TicketContact": {
+                    "description": "联系方式 1:邮箱 2:手机号码",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "TicketContactAccount": {
+                    "description": "联系账号",
+                    "type": "string"
+                },
+                "TicketModelId": {
+                    "description": "对应的工单模型",
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "TicketNumber": {
+                    "description": "工单序号",
+                    "type": "string"
+                },
+                "TicketRead": {
+                    "description": "0:未读 1:已读",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "TicketReferTime": {
+                    "description": "工单耗时参照时间",
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "TicketRunTime": {
+                    "description": "工单解决时长",
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "TicketStatus": {
+                    "description": "工单状态,详情参考option中customstatus",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "TicketSubmitTime": {
+                    "description": "工单提交时间",
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "TicketTitle": {
+                    "description": "工单标题",
+                    "type": "string"
+                },
+                "UserId": {
+                    "description": "工单操作者ID",
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "UserName": {
+                    "description": "工单操作者名字",
+                    "type": "string"
+                }
+            }
+        },
+        "models.PesTicketChat": {
+            "title": "PesTicketChat",
+            "type": "object",
+            "properties": {
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "TicketChatContent": {
+                    "description": "回复内容",
+                    "type": "string"
+                },
+                "TicketChatFile": {
+                    "description": "回复的图片及视频",
+                    "type": "string"
+                },
+                "TicketChatTime": {
+                    "description": "沟通时间",
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "TicketId": {
+                    "description": "工单ID",
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "UserId": {
+                    "description": "用户ID,为0则为发起工单者回复",
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "UserName": {
+                    "description": "回复者的名称,为空则为Customer,即用户回复",
+                    "type": "string"
+                }
+            }
+        },
+        "models.PesTicketContent": {
+            "title": "PesTicketContent",
+            "type": "object",
+            "properties": {
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "TicketFormContent": {
+                    "description": "表单内容值",
+                    "type": "string"
+                },
+                "TicketFormId": {
+                    "description": "对应的工单表单ID",
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "TicketId": {
+                    "description": "工单ID",
+                    "type": "integer",
+                    "format": "int64"
+                }
+            }
+        },
+        "models.PesTicketForm": {
+            "title": "PesTicketForm",
+            "type": "object",
+            "properties": {
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "TicketFormBind": {
+                    "description": "绑定的联动表单",
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "TicketFormBindValue": {
+                    "description": "联动触发值",
+                    "type": "string"
+                },
+                "TicketFormDescription": {
+                    "description": "工单表单显示名称",
+                    "type": "string"
+                },
+                "TicketFormExplain": {
+                    "description": "工单表单说明",
+                    "type": "string"
+                },
+                "TicketFormListsort": {
+                    "description": "动态表单的排序值（升值））",
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "TicketFormModelId": {
+                    "description": "对应的工单模型ID",
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "TicketFormMsg": {
+                    "description": "提示信息",
+                    "type": "string"
+                },
+                "TicketFormName": {
+                    "description": "工单表单名词",
+                    "type": "string"
+                },
+                "TicketFormOption": {
+                    "description": "工单表单的选项值",
+                    "type": "string"
+                },
+                "TicketFormRequired": {
+                    "description": "是否必填 0: 否 1:必填",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "TicketFormStatus": {
+                    "description": "是否启用 0:否 1:启用",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "TicketFormType": {
+                    "description": "工单表单类型",
+                    "type": "string"
+                },
+                "TicketFormVerify": {
+                    "description": "工单表单的验证类型",
+                    "type": "string"
+                }
+            }
+        },
+        "models.PesTicketModel": {
+            "title": "PesTicketModel",
+            "type": "object",
+            "properties": {
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "TicketModelCid": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "TicketModelExplain": {
+                    "type": "string"
+                },
+                "TicketModelListsort": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "TicketModelLogin": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "TicketModelName": {
+                    "description": "工单模型名称",
+                    "type": "string"
+                },
+                "TicketModelNumber": {
+                    "description": "每个用户看到的唯一工单模型ID",
+                    "type": "string"
+                },
+                "TicketModelOwner": {
+                    "description": "工单负责人",
+                    "type": "string"
+                },
+                "TicketModelStatus": {
+                    "description": "工单模型是否启用",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "TicketModelVerify": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            }
+        },
+        "models.PesUser": {
+            "title": "PesUser",
+            "type": "object",
+            "properties": {
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "UserAccount": {
+                    "type": "string"
+                },
+                "UserCreatetime": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "UserGroupId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "UserLastLogin": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "UserMail": {
+                    "type": "string"
+                },
+                "UserName": {
+                    "type": "string"
+                },
+                "UserPassword": {
+                    "type": "string"
+                },
+                "UserStatus": {
+                    "type": "integer",
+                    "format": "int32"
+                }
+            }
+        },
+        "models.PesUserGroup": {
+            "title": "PesUserGroup",
+            "type": "object",
+            "properties": {
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "UserGroupCreatetime": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "UserGroupMenu": {
+                    "type": "string"
+                },
+                "UserGroupName": {
+                    "type": "string"
+                },
+                "UserGroupStatus": {
+                    "type": "integer",
+                    "format": "int32"
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "pes_backend_category",
+            "description": "PesBackendCategoryController operations for PesBackendCategory\n"
+        },
+        {
+            "name": "pes_category",
+            "description": "PesCategoryController operations for PesCategory\n"
+        },
+        {
+            "name": "pes_department",
+            "description": "PesDepartmentController operations for PesDepartment\n"
+        },
+        {
+            "name": "pes_field",
+            "description": "PesFieldController operations for PesField\n"
+        },
+        {
+            "name": "pes_findpassword",
+            "description": "PesFindpasswordController operations for PesFindpassword\n"
+        },
+        {
+            "name": "pes_mail_template",
+            "description": "PesMailTemplateController operations for PesMailTemplate\n"
+        },
+        {
+            "name": "pes_member",
+            "description": "PesMemberController operations for PesMember\n"
+        },
+        {
+            "name": "pes_menu",
+            "description": "PesMenuController operations for PesMenu\n"
+        },
+        {
+            "name": "pes_model",
+            "description": "PesModelController operations for PesModel\n"
+        },
+        {
+            "name": "pes_node",
+            "description": "PesNodeController operations for PesNode\n"
+        },
+        {
+            "name": "pes_node_group",
+            "description": "PesNodeGroupController operations for PesNodeGroup\n"
+        },
+        {
+            "name": "pes_option",
+            "description": "PesOptionController operations for PesOption\n"
+        },
+        {
+            "name": "pes_route",
+            "description": "PesRouteController operations for PesRoute\n"
+        },
+        {
+            "name": "pes_send",
+            "description": "PesSendController operations for PesSend\n"
+        },
+        {
+            "name": "pes_ticket",
+            "description": "PesTicketController operations for PesTicket\n"
+        },
+        {
+            "name": "pes_ticket_chat",
+            "description": "PesTicketChatController operations for PesTicketChat\n"
+        },
+        {
+            "name": "pes_ticket_content",
+            "description": "PesTicketContentController operations for PesTicketContent\n"
+        },
+        {
+            "name": "pes_ticket_form",
+            "description": "PesTicketFormController operations for PesTicketForm\n"
+        },
+        {
+            "name": "pes_ticket_model",
+            "description": "PesTicketModelController operations for PesTicketModel\n"
+        },
+        {
+            "name": "pes_user",
+            "description": "PesUserController operations for PesUser\n"
+        },
+        {
+            "name": "pes_user_group",
+            "description": "PesUserGroupController operations for PesUserGroup\n"
+        }
+    ]
+}
